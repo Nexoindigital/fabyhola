@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FabyHola Sport Team · Tenis de running</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Tenis de running de marca en Puerto Escondido, Oaxaca. Modelos, tallas y precios a la vista. Pedidos por WhatsApp y envíos a todo México.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0F0C; --ink-2:#3B3D36; --muted:#6B6E64; --line:#E3E5DD; --soft:#F4F5F0; --bg:#FFFFFF;
+  --accent:#C8F031; --accent-ink:#0E0F0C; --accent-deep:#5E7A00;
+  --last:#FFF1CC; --last-ink:#7A4A00; --last-line:#E9B949;
+  --out:#F0F0EC; --out-ink:#A3A69C;
+  --wa:#1FAF54;
+  --r:16px; --display:'Barlow Condensed',Impact,sans-serif; --text:Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.2px;line-height:.95;margin:0}
+h2{font-size:clamp(38px,9vw,60px)}
+.kicker{font:700 13px var(--text);letter-spacing:1.5px;text-transform:uppercase;color:var(--accent-deep)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:999px;font:700 16px var(--text);text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#26281f}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--soft)}
+.btn-wa{background:var(--wa);border-color:var(--wa);color:#fff}
+.ico{width:20px;height:20px;flex:none}
+
+/* demo strip */
+.demo{background:var(--ink);color:#fff;font:500 13px var(--text);text-align:center;padding:8px 16px}
+.demo b{color:var(--accent)}
+
+/* hero */
+.hero{padding:36px 0 40px;background:linear-gradient(180deg,#fff 0%,var(--soft) 100%);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font:800 22px var(--display);text-transform:uppercase;letter-spacing:.5px}
+.brand i{width:34px;height:34px;border-radius:10px;background:var(--accent);display:grid;place-items:center;font-style:normal;font-size:20px}
+.hero h1{font-size:clamp(52px,14vw,104px);margin:26px 0 16px}
+.hero h1 span{background:linear-gradient(transparent 58%,var(--accent) 58%,var(--accent) 92%,transparent 92%);padding:0 4px}
+.hero p.sub{font-size:18px;color:var(--ink-2);max-width:560px;margin:0 0 24px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font:600 14px var(--text);color:var(--ink-2)}
+.trust span{display:flex;align-items:center;gap:8px}
+.trust span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent-deep)}
+
+/* filters */
+.filters{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.filters .wrap{padding-top:10px;padding-bottom:10px;display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:2px 16px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;min-height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 14px var(--text);color:var(--ink-2);cursor:pointer;transition:all .15s}
+.chip:hover{border-color:var(--ink-2)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.frow{display:flex;gap:8px;align-items:center}
+.frow .chips{flex:1;min-width:0}
+.size-sel{flex:none;min-height:40px;border-radius:999px;border:1.5px solid var(--ink);background:var(--accent);font:700 14px var(--text);padding:0 12px;color:var(--ink);cursor:pointer}
+.count{font:500 13px var(--text);color:var(--muted)}
+
+/* catalog */
+#catalogo{padding:24px 0 56px;scroll-margin-top:0}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font:500 13px var(--text);color:var(--muted);margin:0 0 16px}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:16px;height:16px;border-radius:5px;display:block}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{position:relative;border:1.5px solid var(--line);border-radius:22px;overflow:hidden;background:#fff;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s,opacity .25s}
+.card:hover{box-shadow:0 14px 40px rgba(14,15,12,.08)}
+.card.enter{animation:in .3s ease both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ph{position:relative;aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#ECEDE7 0 14px,#E5E7DF 14px 28px);display:grid;place-items:center;text-align:center;padding:16px}
+.ph b{font:800 26px/1 var(--display);text-transform:uppercase;color:#9A9D92}
+.ph small{display:block;font:600 11px var(--text);letter-spacing:1px;color:#A9ACA1;margin-top:6px;text-transform:uppercase}
+.tag{position:absolute;top:12px;left:12px;font:700 12px var(--text);padding:6px 10px;border-radius:999px;background:var(--ink);color:var(--accent);text-transform:uppercase;letter-spacing:.5px}
+.tag.hot{background:var(--last);color:var(--last-ink)}
+.body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:12px;flex:1}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.meta{font:700 12px var(--text);letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.name{font:800 28px/1 var(--display);text-transform:uppercase;margin-top:4px}
+.price{text-align:right;flex:none}
+.price b{display:block;font:800 30px/1 var(--display)}
+.price s{font:500 13px var(--text);color:var(--muted)}
+.slabel{display:flex;justify-content:space-between;font:600 13px var(--text);color:var(--ink-2)}
+.sizes{display:flex;flex-wrap:wrap;gap:6px}
+.sz{min-width:52px;min-height:44px;padding:4px 6px;border-radius:12px;border:1.5px solid var(--ink);background:#fff;color:var(--ink);font:700 15px/1.05 var(--text);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:background .12s}
+.sz:hover{background:var(--soft)}
+.sz small{font:700 9px var(--text);text-transform:uppercase;letter-spacing:.4px}
+.sz.last{background:var(--last);border-color:var(--last-line);color:var(--last-ink)}
+.sz.out{background:var(--out);border-color:var(--out);color:var(--out-ink);text-decoration:line-through;cursor:not-allowed}
+.sz[aria-pressed="true"]{background:var(--accent);border-color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);color:var(--ink)}
+.sz.match:not(.out){outline:2px dashed var(--accent-deep);outline-offset:2px}
+.ask{margin-top:auto}
+.ask .btn{width:100%}
+.empty{grid-column:1/-1;text-align:center;padding:40px 16px;border:1.5px dashed var(--line);border-radius:22px;color:var(--ink-2)}
+
+/* sections */
+section.blk{padding:56px 0;border-top:1px solid var(--line)}
+.steps{display:grid;gap:14px;margin-top:24px}
+@media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--soft);border-radius:22px;padding:22px}
+.step .n{width:52px;height:52px;border-radius:14px;background:var(--accent);display:grid;place-items:center;margin-bottom:14px}
+.step .n svg{width:28px;height:28px}
+.step h3{font-size:30px;margin-bottom:6px}
+.step p{margin:0;color:var(--ink-2)}
+.cover{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.cover span{font:600 14px var(--text);padding:8px 14px;border-radius:999px;border:1.5px solid var(--line)}
+.why{display:grid;gap:12px;margin-top:24px}
+@media(min-width:800px){.why{grid-template-columns:1fr 1fr}}
+.why div{display:flex;gap:14px;padding:18px;border:1.5px solid var(--line);border-radius:18px}
+.why b{display:block;font:800 22px/1.05 var(--display);text-transform:uppercase;margin-bottom:4px}
+.why p{margin:0;color:var(--ink-2);font-size:15px}
+.why svg{width:26px;height:26px;flex:none;margin-top:2px}
+.team{background:var(--ink);color:#fff;border-top:0}
+.team h2{color:#fff}
+.team .kicker{color:var(--accent)}
+.team p{color:#C9CBC2;max-width:620px}
+.photos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}
+.photos div{aspect-ratio:1;border-radius:18px;background:repeating-linear-gradient(135deg,#1D1F19 0 14px,#23261E 14px 28px);display:grid;place-items:center;text-align:center;padding:12px;font:600 13px var(--text);color:#7D8075}
+.photos div:first-child{grid-column:1/-1;aspect-ratio:16/9}
+@media(min-width:800px){.photos{grid-template-columns:2fr 1fr 1fr}.photos div:first-child{grid-column:auto;aspect-ratio:auto}}
+.btn-acc{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+details{border-bottom:1.5px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;font:700 17px var(--text);padding:10px 0}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font:800 30px var(--display);transition:transform .2s;flex:none}
+details[open] summary:after{transform:rotate(45deg)}
+details p{margin:0 0 18px;color:var(--ink-2)}
+.faq{margin-top:16px;max-width:780px}
+footer{background:var(--soft);padding:48px 0 110px;border-top:1px solid var(--line)}
+.bigwa{display:flex;align-items:center;gap:14px;text-decoration:none;font:800 clamp(34px,10vw,56px)/1 var(--display);margin:16px 0 22px}
+.bigwa svg{width:44px;height:44px;flex:none;color:var(--wa)}
+.finfo{display:grid;gap:14px;color:var(--ink-2)}
+@media(min-width:800px){.finfo{grid-template-columns:repeat(3,1fr)}}
+.finfo b{display:block;color:var(--ink);font:700 13px var(--text);text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+.credit{margin-top:32px;font:500 13px var(--text);color:var(--muted)}
+/* demo lock */
+.wm{position:fixed;inset:-50%;z-index:25;pointer-events:none;transform:rotate(-24deg);display:flex;flex-wrap:wrap;align-content:flex-start;gap:70px 90px;padding:40px;opacity:.07;font:800 30px var(--display);letter-spacing:2px;color:var(--ink);user-select:none}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(14,15,12,.6);display:grid;place-items:end center;padding:16px}
+.modal[hidden]{display:none}
+.sheet{width:100%;max-width:440px;background:#fff;border-radius:24px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.sheet h3{font-size:34px;margin:6px 0 10px}
+.sheet p{margin:0 0 14px;color:var(--ink-2)}
+.bubble{background:#E7FFDB;border-radius:14px 14px 14px 4px;padding:12px 14px;font:500 15px var(--text);margin:0 0 18px}
+.sheet .btn{width:100%;margin-top:8px}
+.expired{position:fixed;inset:0;z-index:60;background:var(--ink);color:#fff;display:grid;place-items:center;text-align:center;padding:24px}
+.expired h2{color:#fff;font-size:48px;margin-bottom:12px}
+.expired p{color:#C9CBC2;max-width:420px;margin:0 auto 20px}
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;width:64px;height:64px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 10px 30px rgba(31,175,84,.45);transition:transform .15s}
+.fab:hover{transform:scale(1.06)}
+.fab svg{width:34px;height:34px;color:#fff}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.6-.3Z"/></symbol>
+</svg>
+
+<div class="demo"><b>DEMO</b> · Idea de página para FabyHola Sport Team · Modelos, precios y tallas de ejemplo</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><i aria-hidden="true">🤙🏾</i>FabyHola Sport Team</div>
+    <h1>Tenis de running de marca, <span>al precio que sí te late.</span></h1>
+    <p class="sub">Modelos de competencia y de entrenamiento diario, con tallas y precio a la vista. Entrego en Puerto Escondido y Oaxaca de Juárez, y envío a todo México.</p>
+    <div class="ctas">
+      <a class="btn btn-dark" href="#catalogo">Ver catálogo</a>
+      <a class="btn btn-line js-wa" data-msg="Hola Jorge, vi tu catálogo y quiero preguntarte por unos tenis." href="#" target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Pedir por WhatsApp</a>
+    </div>
+    <div class="trust"><span>Corredor atendiendo a corredores</span><span>Modelos que de verdad se corren</span><span>Te digo cuál te conviene</span></div>
+  </div>
+</header>
+
+<nav class="filters" aria-label="Filtros del catálogo">
+  <div class="wrap">
+    <div class="chips" id="fMarca" role="group" aria-label="Marca"></div>
+    <div class="frow">
+      <div class="chips" id="fUso" role="group" aria-label="Uso"></div>
+      <label class="sr" style="position:absolute;left:-9999px" for="fTalla">Talla</label>
+      <select class="size-sel" id="fTalla" aria-label="Filtrar por talla"></select>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section id="catalogo">
+  <div class="wrap">
+    <div class="legend" aria-hidden="true">
+      <span><i style="border:1.5px solid var(--ink)"></i>Disponible</span>
+      <span><i style="background:var(--last);border:1.5px solid var(--last-line)"></i>Última pieza</span>
+      <span><i style="background:var(--out)"></i>Agotada</span>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="grid" id="grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="blk" id="como">
+  <div class="wrap">
+    <div class="kicker">Cómo funciona</div>
+    <h2>Pedir es así de fácil</h2>
+    <div class="steps">
+      <div class="step"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16c3 0 4-3 7-3h3l5 2c2 .8 3 2 3 3H3z"/><path d="M8 13l1-4h3"/></svg></div><h3>1. Elige modelo y talla</h3><p>Ves en el catálogo qué tallas hay de cada modelo y cuánto cuesta.</p></div>
+      <div class="step"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div><h3>2. Escríbeme por WhatsApp</h3><p>El botón ya lleva el modelo y tu talla. Te confirmo y resolvemos dudas.</p></div>
+      <div class="step"><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></div><h3>3. Te lo entrego o te lo envío</h3><p>En persona o por paquetería, como te quede mejor.</p></div>
+    </div>
+    <div class="cover"><span>Entrega en Puerto Escondido</span><span>Entrega en Oaxaca de Juárez</span><span>Envío a toda la República</span></div>
+  </div>
+</section>
+
+<section class="blk" id="por-que">
+  <div class="wrap">
+    <div class="kicker">Por qué conmigo</div>
+    <h2>No solo te vendo tenis</h2>
+    <div class="why">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="14" cy="4" r="2"/><path d="M8 21l3-6 3 2v4M6 12l3-4 4 1 3 3 3 1"/></svg><p><b>Corredor a corredor</b>Te recomiendo según cómo y cuánto entrenas, no lo que más me conviene vender.</p></div>
+      <!-- CONFIRMAR con Jorge: que todo el producto es original -->
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><p><b>Producto original</b>Si tienes duda, te mando fotos de etiqueta y caja antes de que pagues.</p></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><p><b>Modelos difíciles de encontrar</b>Placas de carbono y modelos de competencia que no llegan a las tiendas de aquí.</p></div>
+      <!-- CONFIRMAR con Jorge: que sus precios quedan por debajo de tienda oficial -->
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg><p><b>Precio por debajo de lista</b>Marca buena sin pagar precio de tienda oficial.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk team" id="equipo">
+  <div class="wrap">
+    <div class="kicker">Comunidad</div>
+    <h2>FabyHola Sport Team</h2>
+    <p>Más que una tienda: un equipo de corredores. Vamos juntos a carreras, entrenamos y nos echamos la mano para llegar a la meta, ya sea tu primer 5K o tu siguiente maratón.</p>
+    <div class="photos">
+      <!-- SUSTITUIR: foto real del equipo en una carrera -->
+      <div role="img" aria-label="Foto del equipo en una carrera (pendiente)">Foto del equipo en una carrera</div>
+      <!-- SUSTITUIR: foto real de un entrenamiento -->
+      <div role="img" aria-label="Foto de un entrenamiento (pendiente)">Foto de entrenamiento</div>
+      <!-- SUSTITUIR: foto real en la meta / con medallas -->
+      <div role="img" aria-label="Foto en la meta (pendiente)">Foto en la meta</div>
+    </div>
+    <a class="btn btn-acc js-wa" data-msg="Hola Jorge, quiero sumarme al FabyHola Sport Team. ¿Cómo le hago?" href="#" target="_blank" rel="noopener">Súmate al equipo</a>
+  </div>
+</section>
+
+<section class="blk" id="preguntas">
+  <div class="wrap">
+    <div class="kicker">Preguntas frecuentes</div>
+    <h2>Lo que más me preguntan</h2>
+    <!-- CONFIRMAR con Jorge todas las respuestas antes de publicar -->
+    <div class="faq">
+      <details><summary>¿Son originales?</summary><p>Sí. Antes de pagar te puedo mandar fotos de la etiqueta, la caja y los detalles del modelo que te interesa.</p></details>
+      <details><summary>¿Hacen envíos?</summary><p>Sí, a toda la República por paquetería. En Puerto Escondido y Oaxaca de Juárez también puedo entregarte en persona.</p></details>
+      <details><summary>¿Puedo cambiar la talla?</summary><p>Si te quedan mal y están sin usar, con su caja, lo vemos y te los cambio por otra talla disponible. Escríbeme antes para revisarlo.</p></details>
+      <details><summary>¿Cómo pago?</summary><p>Por transferencia o depósito. En entregas en persona también puedes pagar en efectivo.</p></details>
+      <details><summary>¿Qué modelo me conviene?</summary><p>Depende de cuánto corres, a qué ritmo y para qué los quieres. Mándame tu kilometraje semanal y la distancia que vas a correr, y te recomiendo dos o tres opciones.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="kicker">Contacto</div>
+    <a class="bigwa js-wa" data-msg="Hola Jorge, vi tu catálogo y quiero preguntarte por unos tenis." href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>951 156 8076</a>
+    <div class="finfo">
+      <div><b>Cobertura</b>Puerto Escondido y Oaxaca de Juárez en persona. Envíos a todo México.</div>
+      <!-- CONFIRMAR horario con Jorge -->
+      <div><b>Horario</b>Lunes a sábado, 9:00 a 20:00</div>
+      <!-- SUSTITUIR: enlace real al perfil de Facebook de Jorge -->
+      <div><b>Facebook</b><a href="https://www.facebook.com/search/top?q=Jorge%20Rodr%C3%ADguez%20Canseco" target="_blank" rel="noopener">Jorge Rodríguez Canseco</a></div>
+    </div>
+    <p class="credit">Las marcas mencionadas pertenecen a sus dueños y se usan solo para identificar cada modelo. · Demo hecha por Nexo Digital.</p>
+  </div>
+</footer>
+
+<a class="fab js-wa" data-msg="Hola Jorge, vi tu catálogo y quiero preguntarte por unos tenis." href="#" target="_blank" rel="noopener" aria-label="Escribir a Jorge por WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+/* =====================================================================
+   CATÁLOGO — edita aquí modelos, precios y tallas. No hace falta tocar
+   nada más del archivo.
+
+   Cada producto:
+     marca   : 'Adidas' | 'Nike' | 'Asics' | 'Hoka' | 'Saucony' | 'New Balance'
+     modelo  : nombre del modelo
+     uso     : 'Competencia' | 'Entrenamiento diario' | 'Trail'
+     precio  : número en pesos MXN (sin signo ni comas)
+     antes   : (opcional) precio de lista para mostrarlo tachado
+     etiqueta: (opcional) 'Precio especial' | 'Recién llegados' | 'Pocas piezas'
+     tallas  : talla MX → 'si' (disponible) | 'ultima' (última pieza) | 'no' (agotada)
+     foto    : (opcional) ruta de la foto real, ej. 'img/adios-pro-3.jpg'
+
+   ⚠ DATOS DE EJEMPLO: sustituir por el inventario real de Jorge.
+   ===================================================================== */
+const PRODUCTOS = [
+  { marca:'Adidas', modelo:'Adizero Adios Pro 3', uso:'Competencia', precio:4300, etiqueta:'Precio especial',
+    tallas:{'25':'si','25.5':'ultima','26':'si','26.5':'si','27':'no','27.5':'si','28':'ultima'} },
+  { marca:'Nike', modelo:'Vaporfly 3', uso:'Competencia', precio:4500, etiqueta:'Pocas piezas',
+    tallas:{'24.5':'no','25':'ultima','26':'no','26.5':'ultima','27':'si','28':'no'} },
+  { marca:'Asics', modelo:'Metaspeed Sky Paris', uso:'Competencia', precio:4200,
+    tallas:{'25':'si','25.5':'si','26':'si','27':'ultima','27.5':'no','28.5':'si'} },
+  { marca:'Hoka', modelo:'Rocket X 2', uso:'Competencia', precio:3900, etiqueta:'Recién llegados',
+    tallas:{'25.5':'si','26':'si','26.5':'si','27':'si','28':'si','29':'ultima'} },
+  { marca:'Saucony', modelo:'Endorphin Speed 4', uso:'Entrenamiento diario', precio:3200,
+    tallas:{'24':'si','24.5':'si','25':'no','26':'si','26.5':'ultima','27':'si','28':'si'} },
+  { marca:'Nike', modelo:'Pegasus 41', uso:'Entrenamiento diario', precio:2400,
+    tallas:{'25':'si','25.5':'si','26':'si','26.5':'si','27':'si','27.5':'ultima','28':'si','29':'si'} },
+  { marca:'Adidas', modelo:'Adizero Boston 12', uso:'Entrenamiento diario', precio:2900, etiqueta:'Precio especial',
+    tallas:{'25':'ultima','26':'si','26.5':'no','27':'si','27.5':'si','28':'no'} },
+  { marca:'Asics', modelo:'Novablast 4', uso:'Entrenamiento diario', precio:2300,
+    tallas:{'24':'si','24.5':'ultima','25':'si','25.5':'si','26':'no','27':'si','30':'si'} },
+  { marca:'New Balance', modelo:'FuelCell Rebel v4', uso:'Entrenamiento diario', precio:2200,
+    tallas:{'25':'si','26':'si','26.5':'ultima','27':'si','28':'no','31':'ultima'} },
+  { marca:'Hoka', modelo:'Speedgoat 6', uso:'Trail', precio:3100,
+    tallas:{'25.5':'si','26':'ultima','27':'si','27.5':'si','28':'si'} },
+  { marca:'Saucony', modelo:'Peregrine 14', uso:'Trail', precio:1900, etiqueta:'Precio especial',
+    tallas:{'24.5':'si','25':'si','26':'no','26.5':'si','27':'ultima','29':'no'} },
+];
+
+const WHATSAPP = '529511568076';          // número de Jorge con 52 (México)
+
+/* ---------- MODO DEMO (Nexo Digital) ----------
+   DEMO = true  → los botones NO abren el WhatsApp de Jorge: muestran cómo le
+                  llegaría el mensaje. Marca de agua visible.
+   DEMO_HASTA   → después de esta fecha la página se bloquea.
+   Al cerrar el trato (anticipo pagado): DEMO = false y borrar DEMO_HASTA.   */
+const DEMO = true;
+const DEMO_HASTA = '2026-10-28';
+const NEXO_WA = '529511271872';
+const MARCAS = ['Todas','Adidas','Nike','Asics','Hoka','Saucony','New Balance'];
+const USOS   = ['Todos','Competencia','Entrenamiento diario','Trail'];
+const TALLAS = []; for (let t = 24; t <= 31; t += 0.5) TALLAS.push(String(t));
+/* ===================================================================== */
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const waUrl = msg => DEMO ? '#demo' : 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg);
+const MSGS = {};
+const peso = n => '$' + n.toLocaleString('es-MX');
+const state = { marca:'Todas', uso:'Todos', talla:'', elegida:{} };
+
+document.querySelectorAll('.js-wa').forEach(a => { a.href = waUrl(a.dataset.msg); a.dataset.demo = a.dataset.msg; });
+
+function chips(el, items, key){
+  el.innerHTML = items.map(v => '<button type="button" class="chip" aria-pressed="' + (state[key]===v) + '" data-v="' + esc(v) + '">' + esc(v) + '</button>').join('');
+  el.onclick = e => { const b = e.target.closest('.chip'); if(!b) return; state[key] = b.dataset.v;
+    el.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', String(x === b))); render(); };
+}
+chips($('#fMarca'), MARCAS, 'marca');
+chips($('#fUso'), USOS, 'uso');
+$('#fTalla').innerHTML = '<option value="">Mi talla</option>' + TALLAS.map(t => '<option value="' + t + '">Talla ' + t + '</option>').join('');
+$('#fTalla').onchange = e => { state.talla = e.target.value; render(); };
+
+function msgFor(p, i){
+  const t = state.elegida[i] || '';
+  return 'Hola Jorge, me interesan los ' + p.marca + ' ' + p.modelo + (t ? ', talla ' + t : '') + '. ¿Tienes disponible?';
+}
+
+function render(){
+  const list = PRODUCTOS.map((p, i) => ({p, i})).filter(({p}) =>
+    (state.marca === 'Todas' || p.marca === state.marca) &&
+    (state.uso === 'Todos' || p.uso === state.uso) &&
+    (!state.talla || ['si','ultima'].includes(p.tallas[state.talla])));
+  $('#count').textContent = list.length + (list.length === 1 ? ' modelo' : ' modelos');
+  if (!list.length) {
+    $('#grid').innerHTML = '<div class="empty"><p><b>No tengo ese modelo en tu talla ahorita.</b><br>Escríbeme y te digo cuándo llega o qué alternativa te conviene.</p><a class="btn btn-wa" target="_blank" rel="noopener" href="' +
+      waUrl('Hola Jorge, busco tenis' + (state.marca !== 'Todas' ? ' ' + state.marca : '') + (state.talla ? ' en talla ' + state.talla : '') + '. ¿Qué tienes?') + '"><svg class="ico"><use href="#wa"/></svg>Preguntar a Jorge</a></div>';
+    return;
+  }
+  $('#grid').innerHTML = list.map(({p, i}) => {
+    if (state.talla && !state.elegida[i] && p.tallas[state.talla] !== 'no') state.elegida[i] = state.talla;
+    const ts = Object.keys(p.tallas).sort((a, b) => a - b);
+    const disp = ts.filter(t => p.tallas[t] !== 'no').length;
+    const pills = ts.map(t => {
+      const s = p.tallas[t], cls = s === 'ultima' ? 'last' : s === 'no' ? 'out' : '';
+      const lbl = 'Talla ' + t + (s === 'ultima' ? ', última pieza' : s === 'no' ? ', agotada' : ', disponible');
+      return '<button type="button" class="sz ' + cls + (state.talla === t ? ' match' : '') + '" data-p="' + i + '" data-t="' + t + '"' +
+        (s === 'no' ? ' disabled aria-disabled="true"' : ' aria-pressed="' + (state.elegida[i] === t) + '"') + ' aria-label="' + lbl + '">' +
+        t + (s === 'ultima' ? '<small>última</small>' : '') + '</button>';
+    }).join('');
+    return '<article class="card enter">' +
+      '<!-- SUSTITUIR: foto real del producto -->' +
+      (p.foto ? '<img class="ph" src="' + esc(p.foto) + '" alt="' + esc(p.marca + ' ' + p.modelo) + '" loading="lazy">'
+              : '<div class="ph" role="img" aria-label="Foto pendiente: ' + esc(p.marca + ' ' + p.modelo) + '"><div><b>' + esc(p.modelo) + '</b><small>Foto real pendiente</small></div></div>') +
+      (p.etiqueta ? '<span class="tag' + (p.etiqueta === 'Pocas piezas' ? ' hot' : '') + '">' + esc(p.etiqueta) + '</span>' : '') +
+      '<div class="body"><div class="top"><div><div class="meta">' + esc(p.marca) + ' · ' + esc(p.uso) + '</div><h3 class="name">' + esc(p.modelo) + '</h3></div>' +
+      '<div class="price"><b>' + peso(p.precio) + '</b>' + (p.antes ? '<s>' + peso(p.antes) + '</s>' : '<s style="text-decoration:none">MXN</s>') + '</div></div>' +
+      '<div class="slabel"><span>Tallas MX</span><span>' + (disp ? disp + ' disponibles' : 'Agotado') + '</span></div>' +
+      '<div class="sizes" role="group" aria-label="Tallas de ' + esc(p.modelo) + '">' + pills + '</div>' +
+      '<div class="ask"><a class="btn btn-wa" data-ask="' + i + '" target="_blank" rel="noopener" href="' + waUrl(msgFor(p, i)) + '"><svg class="ico"><use href="#wa"/></svg>' +
+      (state.elegida[i] ? 'Preguntar por talla ' + state.elegida[i] : 'Preguntar por este') + '</a></div></div></article>';
+  }).join('');
+}
+
+$('#grid').addEventListener('click', e => {
+  const b = e.target.closest('.sz'); if (!b || b.disabled) return;
+  const i = +b.dataset.p, t = b.dataset.t;
+  state.elegida[i] = state.elegida[i] === t ? '' : t;
+  const card = b.closest('.card');
+  card.querySelectorAll('.sz:not([disabled])').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.t === state.elegida[i])));
+  const a = card.querySelector('[data-ask]');
+  a.href = waUrl(msgFor(PRODUCTOS[i], i));
+  a.lastChild.textContent = state.elegida[i] ? 'Preguntar por talla ' + state.elegida[i] : 'Preguntar por este';
+});
+
+render();
+</script>
+<script>
+if (DEMO) {
+  // marca de agua
+  const wm = document.createElement('div'); wm.className = 'wm'; wm.setAttribute('aria-hidden', 'true');
+  wm.innerHTML = '<span>DEMO · NEXO DIGITAL</span>'.repeat(80); document.body.appendChild(wm);
+  // vista previa del mensaje en lugar de abrir WhatsApp
+  const m = document.createElement('div'); m.className = 'modal'; m.hidden = true;
+  m.innerHTML = '<div class="sheet" role="dialog" aria-modal="true" aria-labelledby="mt"><div class="kicker">Vista previa · demo</div><h3 id="mt">Así le llegaría a Jorge</h3>' +
+    '<div class="bubble" id="mb"></div><p>En la versión final este botón abre WhatsApp directo con este mensaje. Esta es una demo de Nexo Digital y no está activa.</p>' +
+    '<a class="btn btn-dark" target="_blank" rel="noopener" href="https://wa.me/' + NEXO_WA + '?text=' + encodeURIComponent('Hola Luis, vi la demo de FabyHola y quiero activarla.') + '">Activar con Nexo Digital</a>' +
+    '<button class="btn btn-line" type="button" id="mc">Seguir viendo</button></div>';
+  document.body.appendChild(m);
+  const close = () => { m.hidden = true; };
+  m.addEventListener('click', e => { if (e.target === m || e.target.id === 'mc') close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href="#demo"]'); if (!a) return;
+    e.preventDefault();
+    let msg = a.dataset.demo;
+    if (a.dataset.ask != null) msg = msgFor(PRODUCTOS[+a.dataset.ask], +a.dataset.ask);
+    if (!msg) msg = 'Hola Jorge, busco tenis. ¿Qué tienes?';
+    document.getElementById('mb').textContent = msg; m.hidden = false; document.getElementById('mc').focus();
+  });
+  // caducidad
+  if (DEMO_HASTA && new Date() > new Date(DEMO_HASTA + 'T23:59:59')) {
+    const x = document.createElement('div'); x.className = 'expired';
+    x.innerHTML = '<div><h2>Demo terminada</h2><p>Esta fue una propuesta de página hecha por Nexo Digital para FabyHola Sport Team.</p><a class="btn btn-acc" href="https://wa.me/' + NEXO_WA + '">Hablar con Nexo Digital</a></div>';
+    document.body.appendChild(x); document.body.style.overflow = 'hidden';
+  }
+}
+</script>
+</body>
+</html>
